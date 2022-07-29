@@ -26,7 +26,7 @@ for (i in 1:nrow(SPI_df)) {
   if (SPI_df$Original_name[i] == "Leicester") {
     SPI_df$Name[i] <- "Leicester City"
   }
-  if (SPI_df$Original_name[i] == "Norwich") {
-    SPI_df$Name[i] <- "Norwich City"
+  if (SPI_df$Original_name[i] == "Nottm Forest") {
+    SPI_df$Name[i] <- "Nott'ham Forest"
   }
 }

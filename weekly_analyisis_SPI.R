@@ -5,7 +5,8 @@ matchweek_files_SPI <- list.files(path = "SPI_tables/")
 #save each to a different index in the list
 for (i in 1:length(matchweek_files_SPI)) {
   matchweek_tables_SPI[[i]]<- read.csv(paste0("SPI_tables/", matchweek_files_SPI[i]))
-  matchweek_tables_SPI[[i]]$matchday <- i
+  matchday_str <- as.numeric(str_extract(matchweek_files_SPI[i], "\\d+")) ##multiple digits
+  matchweek_tables_SPI[[i]]$matchday <- matchday_str
 }
 
 #combine into one df
@@ -14,10 +15,10 @@ weekly_table_SPI <- bind_rows(matchweek_tables_SPI)
 
 #create a color dictionary
 
-color_list <- c("#EF0107", "#670e36", "#000000", "#A0D5CB", "#fde3ab",
-                "#034694", "#a7a5a6", "#87BDA0", "#AFAAE2", "#003A83",
-                "#009782", "#97c1e7", "#DA291C", "#523a28", "#00A650",
-                "#525252", "#132257", "#fbee23", "#7f0000", "#fdb913")
+color_list <- c("#F7B6D0", "#670e36", "#F6403B", "#E7DC51", "#A0D5CB",
+                "#034694", "#a7a5a6", "#87BDA0", "#000000", "#D7E400", "#003A83",
+                "#009782", "#97c1e7", "#DA291C", "#523a28", "#AA1617",
+                "#525252", "#132257", "#7f0000", "#fdb913")
 colors <- data.frame(row.names = team_list, color = color_list)
 
 #to look at the colors for testing:

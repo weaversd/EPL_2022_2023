@@ -15,10 +15,10 @@ weekly_table <- bind_rows(matchweek_tables)
 
 #create a color dictionary
 
-color_list <- c("#EF0107", "#670e36", "#000000", "#A0D5CB", "#fde3ab",
-                "#034694", "#a7a5a6", "#87BDA0", "#AFAAE2", "#003A83",
-                "#009782", "#97c1e7", "#DA291C", "#523a28", "#00A650",
-                "#525252", "#132257", "#fbee23", "#7f0000", "#fdb913")
+color_list <- c("#F7B6D0", "#670e36", "#F6403B", "#E7DC51", "#A0D5CB",
+                "#034694", "#a7a5a6", "#87BDA0", "#000000", "#D7E400", "#003A83",
+                "#009782", "#97c1e7", "#DA291C", "#523a28", "#AA1617",
+                "#525252", "#132257", "#7f0000", "#fdb913")
 colors <- data.frame(row.names = team_list, color = color_list)
 
 #to look at the colors for testing:
@@ -78,9 +78,10 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
         axis.title = element_text(size = 20),
         legend.key.height = unit(1, "cm")) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  labs(x = "Week", y = "Position", title = "2021-2022 EPL table position by week") +
+  labs(x = "Week", y = "Position", title = "2022-2023 EPL table position by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
-  scale_fill_identity()
+  scale_fill_identity(guide = "legend",
+                      labels = current_team_order)
 
 #save as png
 png("weekly_analysis/position_by_week.png", width = 1200, height = 700)
@@ -107,7 +108,8 @@ UCL_plot <- ggplot(data = weekly_table, aes(x = matchday, y = UCL_pct)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Chance to make UCL (%)", title = "2021-2022 EPL chance to make UCL by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
-  scale_fill_identity()
+  scale_fill_identity(guide = "legend",
+                      labels = current_team_order)
 
 png("weekly_analysis/UCL_chance_by_week.png", width = 1200, height = 700)
 show(UCL_plot)
@@ -130,7 +132,8 @@ relegation_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Relegated_p
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Chance of relegation (%)", title = "2021-2022 relegation chance by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
-  scale_fill_identity()
+  scale_fill_identity(guide = "legend",
+                      labels = current_team_order)
 
 png("weekly_analysis/relegation_chance_by_week.png", width = 1200, height = 700)
 show(relegation_plot)
@@ -152,7 +155,8 @@ title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct))
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Chance of winning the EPL (%)", title = "2021-2022 EPL title chance by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
-  scale_fill_identity()
+  scale_fill_identity(guide = "legend",
+                      labels = current_team_order)
 
 png("weekly_analysis/title_chance_by_week.png", width = 1200, height = 700)
 show(title_plot)
@@ -171,10 +175,11 @@ points_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pts)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  scale_y_continuous(breaks = function(x) seq(ceiling(x[1])+2, floor(x[2]), by = 2)) +
+  scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Points", title = "2021-2022 EPL points by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
-  scale_fill_identity()
+  scale_fill_identity(guide = "legend",
+                      labels = current_team_order)
 
 png("weekly_analysis/points_by_week.png", width = 1200, height = 700)
 show(points_plot)
@@ -193,7 +198,7 @@ GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 3)) +
+  scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Goal Differential", title = "2021-2022 EPL goal differential by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
@@ -215,7 +220,7 @@ GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  scale_y_continuous(limits = c(0,NA), breaks = function(x) seq(ceiling(x[1])+2, floor(x[2]), by = 2)) +
+  scale_y_continuous(limits = c(0,NA), breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Goals scored", title = "2021-2022 EPL goals scored by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
@@ -237,7 +242,7 @@ GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  scale_y_continuous(breaks = function(x) seq(ceiling(x[1])+2, floor(x[2]), by = 2)) +
+  scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Goals against", title = "2021-2022 EPL goals against by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()

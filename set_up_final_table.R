@@ -7,7 +7,7 @@ played_games$Matchday <- as.numeric(played_games$Matchday)
 
 #check to see if any games have been played. set # of MD to 1 if not
 if (nrow(played_games) == 0) {
-  current_matchday <- 1
+  current_matchday <- 0
 } else {
   #determine the matchday
   #current_matchday <- max(as.numeric((played_games$Matchday)))
@@ -24,7 +24,7 @@ colnames(positions) <- team_list
 
 
 #set defaults if current day is 1
-if (current_matchday == 1){
+if (current_matchday <= 1){
   current_table$Prev <- NA
   current_table$Change <- 0
 } else {
