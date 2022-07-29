@@ -1,8 +1,8 @@
-# Premier League 2021-22 Results and Visualization
+# Premier League 2022-23 Results and Visualization
 by: Simon Weaver
 
 ## Source Code: 
-[https://github.com/weaversd/EPL_2021-2022](https://github.com/weaversd/EPL_2021-2022)
+[https://github.com/weaversd/EPL_2022-2023](https://github.com/weaversd/EPL_2022-2023)
 
 
 ## Table:
@@ -38,7 +38,7 @@ by: Simon Weaver
 
 SPI scores come from [fivethirtyeight](https://projects.fivethirtyeight.com/soccer-predictions/premier-league/)  
 
-Scores and schedule come from [fbref](https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures)  
+Scores and schedule come from [fbref](https://fbref.com/en/comps/9/11566/schedule/2022-2023-Premier-League-Scores-and-Fixtures)  
 
 Prediction model is based on the method by [fivethirtyeight](https://fivethirtyeight.com/methodology/how-our-club-soccer-predictions-work/)
 

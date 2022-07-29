@@ -69,7 +69,7 @@ SPI_plot <- ggplot(data = weekly_table_SPI, aes(x = matchday, y = SPI)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  labs(x = "Week", y = "SPI rating", title = "2021-2022 EPL SPI rating by week") +
+  labs(x = "Week", y = "SPI rating", title = "2022-2023 EPL SPI rating by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
 
@@ -93,7 +93,7 @@ Off_SPI_plot <- ggplot(data = weekly_table_SPI, aes(x = matchday, y = Off)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  labs(x = "Week", y = "Offensive SPI rating", title = "2021-2022 EPL Offensive SPI rating by week") +
+  labs(x = "Week", y = "Offensive SPI rating", title = "2022-2023 EPL Offensive SPI rating by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
 
@@ -116,7 +116,7 @@ Def_SPI_plot <- ggplot(data = weekly_table_SPI, aes(x = matchday, y = Def)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  labs(x = "Week", y = "Defensive SPI rating", title = "2021-2022 EPL Defensive SPI rating by week") +
+  labs(x = "Week", y = "Defensive SPI rating", title = "2022-2023 EPL Defensive SPI rating by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
 
