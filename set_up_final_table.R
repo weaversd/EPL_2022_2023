@@ -5,7 +5,7 @@ simulation_table <- simulate_n_seasons(simulated_seasons)
 played_games <- scores_df[!is.na(scores_df$H_score),]
 played_games$Matchday <- as.numeric(played_games$Matchday)
 
-#check to see if any games have been played. set # of MD to 1 if not
+#check to see if any games have been played. set # of MD to 0 if not
 if (nrow(played_games) == 0) {
   current_matchday <- 0
 } else {

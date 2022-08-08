@@ -15,7 +15,7 @@ weekly_table <- bind_rows(matchweek_tables)
 
 #create a color dictionary
 
-color_list <- c("#F7B6D0", "#670e36", "#F6403B", "#E7DC51", "#A0D5CB",
+color_list <- c("#F7B6D0", "#670e36", "#F6403B", "#F4CF14", "#A0D5CB",
                 "#034694", "#a7a5a6", "#87BDA0", "#000000", "#D7E400", "#003A83",
                 "#009782", "#97c1e7", "#DA291C", "#523a28", "#AA1617",
                 "#525252", "#132257", "#7f0000", "#fdb913")
