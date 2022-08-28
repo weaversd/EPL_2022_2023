@@ -79,3 +79,4 @@ write.table(current_table_output, paste0("current_table_output/Matchweek_", curr
 source("weekly_analysis.R")
 source("weekly_analyisis_SPI.R")
 
+
