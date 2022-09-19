@@ -126,7 +126,9 @@ import_test <- function() {
   
   scores_df <- populate_wins_losses(scores_df)
   
-  print(head(scores_df))
+  scores_df <- scores_df[!is.na(scores_df$H_score),]
+  
+  print(tail(scores_df))
   
 }
 
