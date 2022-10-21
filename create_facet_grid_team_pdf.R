@@ -2,8 +2,6 @@ library(png)
 library(grid)
 library(pdftools)
 
-working_directory <- getwd()
-
 setwd(paste0(working_directory, "weekly_analysis/weekly_team_plots/"))
 plots <- lapply(ll <- list.files(),function(x){
   img <- as.raster(readPNG(x))
