@@ -1,5 +1,6 @@
 #Set your home directory below:
 working_directory <- "~/Personal_projects/EPL_2022_2023//"
+working_directory <- "C:/Users/Simon/OneDrive - nd.edu/Documents/Personal_projects/EPL_2022_2023/"
 setwd(working_directory)
 
 #packages
