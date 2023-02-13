@@ -132,7 +132,7 @@ table_out <- as.htmlwidget(formattable(current_table, row.names = F,
                                             `Relegated_pct` = color_bar("pink"),
                                             `Prev` = FALSE,
                                             `Change`= formatter("span",
-                                                                style = ~ style(color = ifelse(`Prev` == `Pos`, "black", ifelse(`Prev` > `Pos`, "green", "red"))),
+                                                                style = ~ formattable::style(color = ifelse(`Prev` == `Pos`, "black", ifelse(`Prev` > `Pos`, "green", "red"))),
                                                                 ~ icontext(sapply(`Change`, function(x) if (x < 0) "arrow-down" else if (x > 0) "arrow-up" else ""), `Change`)))))
 
 #make the sparklines work
