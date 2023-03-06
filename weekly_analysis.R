@@ -85,7 +85,7 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
 
 #save as png
 png("weekly_analysis/position_by_week.png", width = 1200, height = 700)
-show(position_plot)
+(position_plot)
 dev.off()
 
 
@@ -112,7 +112,7 @@ UCL_plot <- ggplot(data = weekly_table, aes(x = matchday, y = UCL_pct)) +
                       labels = current_team_order)
 
 png("weekly_analysis/UCL_chance_by_week.png", width = 1200, height = 700)
-show(UCL_plot)
+(UCL_plot)
 dev.off()
 
 
@@ -136,7 +136,7 @@ relegation_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Relegated_p
                       labels = current_team_order)
 
 png("weekly_analysis/relegation_chance_by_week.png", width = 1200, height = 700)
-show(relegation_plot)
+(relegation_plot)
 dev.off()
 
 #make a percent title plot
@@ -159,7 +159,7 @@ title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct))
                       labels = current_team_order)
 
 png("weekly_analysis/title_chance_by_week.png", width = 1200, height = 700)
-show(title_plot)
+(title_plot)
 dev.off()
 
 #make a points plot
@@ -182,7 +182,7 @@ points_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pts)) +
                       labels = current_team_order)
 
 png("weekly_analysis/points_by_week.png", width = 1200, height = 700)
-show(points_plot)
+(points_plot)
 dev.off()
 
 #make a GD plot
@@ -204,7 +204,7 @@ GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
   scale_fill_identity()
 
 png("weekly_analysis/goal_differential_by_week.png", width = 1200, height = 700)
-show(GD_plot)
+(GD_plot)
 dev.off()
 
 #make a GF plot
@@ -226,7 +226,7 @@ GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
   scale_fill_identity()
 
 png("weekly_analysis/goals_scored_by_week.png", width = 1200, height = 700)
-show(GF_plot)
+(GF_plot)
 dev.off()
 
 #make a GA plot
@@ -248,7 +248,7 @@ GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
   scale_fill_identity()
 
 png("weekly_analysis/goals_against_by_week.png", width = 1200, height = 700)
-show(GA_plot)
+(GA_plot)
 dev.off()
 
 #run the by team weekly analysis

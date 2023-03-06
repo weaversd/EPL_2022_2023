@@ -48,7 +48,7 @@ source("import_scores_and_schedule.R")
 source("set_up_final_table.R")
 
 #Display table
-show(table_out)
+(table_out)
 
 #Save table as png in the table_output folder for posterity
 path <- html_print(table_out, background = "white", viewer = NULL)

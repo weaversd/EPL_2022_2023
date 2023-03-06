@@ -62,9 +62,9 @@ create_team_plot <- function(TEAM) {
 
 for (i in 1:length(team_list)){
   plot <- create_team_plot(team_list[i])
-  show(plot)
+  (plot)
   
   png(paste0("weekly_analysis/weekly_team_plots/", team_list[i], "_by_week.png"), width = 1200, height = 700)
-  show(plot)
+  (plot)
   dev.off()
 }

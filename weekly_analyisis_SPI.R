@@ -74,7 +74,7 @@ SPI_plot <- ggplot(data = weekly_table_SPI, aes(x = matchday, y = SPI)) +
   scale_fill_identity()
 
 png("weekly_analysis/SPI_rating_by_week.png", width = 1200, height = 700)
-show(SPI_plot)
+(SPI_plot)
 dev.off()
 
 
@@ -98,7 +98,7 @@ Off_SPI_plot <- ggplot(data = weekly_table_SPI, aes(x = matchday, y = Off)) +
   scale_fill_identity()
 
 png("weekly_analysis/SPI_rating_by_week_offense.png", width = 1200, height = 700)
-show(Off_SPI_plot)
+(Off_SPI_plot)
 dev.off()
 
 
@@ -121,5 +121,5 @@ Def_SPI_plot <- ggplot(data = weekly_table_SPI, aes(x = matchday, y = Def)) +
   scale_fill_identity()
 
 png("weekly_analysis/SPI_rating_by_week_defense.png", width = 1200, height = 700)
-show(Def_SPI_plot)
+(Def_SPI_plot)
 dev.off()
