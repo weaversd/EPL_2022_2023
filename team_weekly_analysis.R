@@ -32,6 +32,7 @@ create_team_plot <- function(TEAM) {
                                               "Relegated_pct"))
   
   
+  
   team_plot <- ggplot(data = TEAM_df_long) +
     geom_line(aes(x = matchday, y = value, color = attribute, linetype = attribute), size = 1.25) +
     theme_bw() +
@@ -56,6 +57,7 @@ create_team_plot <- function(TEAM) {
                                      "dotted", "dotted", "dotted",
                                      "dotdash", "dotdash", "dotdash"))
     #guides(color = guide_legend(override.aes = list(size = 5)))
+  team_plot
   return(team_plot)
 }
 
