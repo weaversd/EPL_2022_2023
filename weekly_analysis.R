@@ -76,7 +76,7 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
         legend.text = element_text(size = 20),
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20),
-        legend.key.height = unit(1, "cm")) +
+        legend.key.height = unit(1.09, "cm")) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Position", title = "2022-2023 EPL table position by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
@@ -87,6 +87,9 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
 png("weekly_analysis/position_by_week.png", width = 1200, height = 700)
 (position_plot)
 dev.off()
+
+(position_plot)
+ggsave("weekly_analysis/position_by_week.png")
 
 
 #keep the order consistent alphebetically for the remaining plots
@@ -115,6 +118,8 @@ png("weekly_analysis/UCL_chance_by_week.png", width = 1200, height = 700)
 (UCL_plot)
 dev.off()
 
+(UCL_plot)
+ggsave("weekly_analysis/UCL_chance_by_week.png")
 
 #make a percent relegation plot
 relegation_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Relegated_pct)) +
@@ -139,6 +144,9 @@ png("weekly_analysis/relegation_chance_by_week.png", width = 1200, height = 700)
 (relegation_plot)
 dev.off()
 
+(relegation_plot)
+ggsave("weekly_analysis/relegation_chance_by_week.png")
+
 #make a percent title plot
 title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct)) +
   geom_line(aes(color = color), size = 1.5) +
@@ -161,6 +169,9 @@ title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct))
 png("weekly_analysis/title_chance_by_week.png", width = 1200, height = 700)
 (title_plot)
 dev.off()
+
+(title_plot)
+ggsave("weekly_analysis/title_chance_by_week.png")
 
 #make a points plot
 points_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pts)) +
@@ -185,6 +196,9 @@ png("weekly_analysis/points_by_week.png", width = 1200, height = 700)
 (points_plot)
 dev.off()
 
+(points_plot)
+ggsave("weekly_analysis/points_by_week.png")
+
 #make a GD plot
 GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
   geom_line(aes(color = color), size = 1.5) +
@@ -206,6 +220,9 @@ GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
 png("weekly_analysis/goal_differential_by_week.png", width = 1200, height = 700)
 (GD_plot)
 dev.off()
+
+(GD_plot)
+ggsave("weekly_analysis/goal_differential_by_week.png")
 
 #make a GF plot
 GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
@@ -229,6 +246,9 @@ png("weekly_analysis/goals_scored_by_week.png", width = 1200, height = 700)
 (GF_plot)
 dev.off()
 
+(GF_plot)
+ggsave("weekly_analysis/goals_scored_by_week.png")
+
 #make a GA plot
 GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
   geom_line(aes(color = color), size = 1.5) +
@@ -250,6 +270,9 @@ GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
 png("weekly_analysis/goals_against_by_week.png", width = 1200, height = 700)
 (GA_plot)
 dev.off()
+
+(GA_plot)
+ggsave("weekly_analysis/goals_against_by_week.png")
 
 #run the by team weekly analysis
 source("team_weekly_analysis.R")

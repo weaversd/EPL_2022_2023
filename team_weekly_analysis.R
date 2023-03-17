@@ -64,9 +64,13 @@ create_team_plot <- function(TEAM) {
 
 for (i in 1:length(team_list)){
   plot <- create_team_plot(team_list[i])
-  (plot)
-  
-  png(paste0("weekly_analysis/weekly_team_plots/", team_list[i], "_by_week.png"), width = 1200, height = 700)
-  (plot)
-  dev.off()
+  # (plot)
+  # Sys.sleep(1)
+  # png(paste0("weekly_analysis/weekly_team_plots/", team_list[i], "_by_week.png"), width = 1200, height = 700)
+  # Sys.sleep(1)
+  # (plot)
+  # Sys.sleep(1)
+  # dev.off()
+  plot
+  ggsave(paste0("weekly_analysis/weekly_team_plots/", team_list[i], "_by_week.png"))
 }
