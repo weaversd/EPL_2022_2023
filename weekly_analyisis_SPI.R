@@ -77,6 +77,9 @@ png("weekly_analysis/SPI_rating_by_week.png", width = 1200, height = 700)
 (SPI_plot)
 dev.off()
 
+(SPI_plot)
+ggsave("weekly_analysis/SPI_rating_by_week.png")
+
 
 
 #create offensive SPI plot
@@ -101,6 +104,9 @@ png("weekly_analysis/SPI_rating_by_week_offense.png", width = 1200, height = 700
 (Off_SPI_plot)
 dev.off()
 
+(Off_SPI_plot)
+ggsave("weekly_analysis/SPI_rating_by_week_offense.png")
+
 
 #create defensive SPI plot
 Def_SPI_plot <- ggplot(data = weekly_table_SPI, aes(x = matchday, y = Def)) +
@@ -123,3 +129,8 @@ Def_SPI_plot <- ggplot(data = weekly_table_SPI, aes(x = matchday, y = Def)) +
 png("weekly_analysis/SPI_rating_by_week_defense.png", width = 1200, height = 700)
 (Def_SPI_plot)
 dev.off()
+
+
+
+(Def_SPI_plot)
+ggsave("weekly_analysis/SPI_rating_by_week_defense.png")
