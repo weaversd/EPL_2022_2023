@@ -84,12 +84,9 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
                       labels = current_team_order)
 
 #save as png
-png("weekly_analysis/position_by_week.png", width = 1200, height = 700)
-(position_plot)
-dev.off()
 
 (position_plot)
-ggsave("weekly_analysis/position_by_week.png")
+ggsave("weekly_analysis/position_by_week.png", device = "png")
 
 
 #keep the order consistent alphebetically for the remaining plots
@@ -114,10 +111,6 @@ UCL_plot <- ggplot(data = weekly_table, aes(x = matchday, y = UCL_pct)) +
   scale_fill_identity(guide = "legend",
                       labels = current_team_order)
 
-png("weekly_analysis/UCL_chance_by_week.png", width = 1200, height = 700)
-(UCL_plot)
-dev.off()
-
 (UCL_plot)
 ggsave("weekly_analysis/UCL_chance_by_week.png")
 
@@ -139,10 +132,6 @@ relegation_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Relegated_p
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity(guide = "legend",
                       labels = current_team_order)
-
-png("weekly_analysis/relegation_chance_by_week.png", width = 1200, height = 700)
-(relegation_plot)
-dev.off()
 
 (relegation_plot)
 ggsave("weekly_analysis/relegation_chance_by_week.png")
@@ -166,9 +155,6 @@ title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct))
   scale_fill_identity(guide = "legend",
                       labels = current_team_order)
 
-png("weekly_analysis/title_chance_by_week.png", width = 1200, height = 700)
-(title_plot)
-dev.off()
 
 (title_plot)
 ggsave("weekly_analysis/title_chance_by_week.png")
@@ -192,10 +178,6 @@ points_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pts)) +
   scale_fill_identity(guide = "legend",
                       labels = current_team_order)
 
-png("weekly_analysis/points_by_week.png", width = 1200, height = 700)
-(points_plot)
-dev.off()
-
 (points_plot)
 ggsave("weekly_analysis/points_by_week.png")
 
@@ -216,10 +198,6 @@ GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
   labs(x = "Week", y = "Goal Differential", title = "2022-2023 EPL goal differential by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
-
-png("weekly_analysis/goal_differential_by_week.png", width = 1200, height = 700)
-(GD_plot)
-dev.off()
 
 (GD_plot)
 ggsave("weekly_analysis/goal_differential_by_week.png")
@@ -242,10 +220,6 @@ GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
 
-png("weekly_analysis/goals_scored_by_week.png", width = 1200, height = 700)
-(GF_plot)
-dev.off()
-
 (GF_plot)
 ggsave("weekly_analysis/goals_scored_by_week.png")
 
@@ -266,10 +240,6 @@ GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
   labs(x = "Week", y = "Goals against", title = "2022-2023 EPL goals against by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
-
-png("weekly_analysis/goals_against_by_week.png", width = 1200, height = 700)
-(GA_plot)
-dev.off()
 
 (GA_plot)
 ggsave("weekly_analysis/goals_against_by_week.png")
