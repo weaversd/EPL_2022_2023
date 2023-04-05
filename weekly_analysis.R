@@ -86,7 +86,8 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
 #save as png
 
 (position_plot)
-ggsave("weekly_analysis/position_by_week.png", device = "png")
+ggsave("weekly_analysis/position_by_week.png", device = "png",
+       width = 8, height = 4.403)
 
 
 #keep the order consistent alphebetically for the remaining plots
