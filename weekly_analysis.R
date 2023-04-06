@@ -73,13 +73,13 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_line(color = "grey", linetype = "dashed"),
         panel.grid.minor.y = element_blank(),
-        legend.text = element_text(size = 20),
-        axis.text = element_text(size = 20),
+        legend.text = element_text(size = 10),
+        axis.text = element_text(size = 10),
         axis.title = element_text(size = 20),
-        legend.key.height = unit(1.09, "cm")) +
+        legend.key.height = unit(0.57, "cm")) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Position", title = "2022-2023 EPL table position by week") +
-  geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
+  geom_point(aes(fill = color), size = 2, shape = 21, stroke = 0.5) +
   scale_fill_identity(guide = "legend",
                       labels = current_team_order)
 
@@ -102,8 +102,8 @@ UCL_plot <- ggplot(data = weekly_table, aes(x = matchday, y = UCL_pct)) +
   theme(legend.title = element_blank(),
         legend.position = "right", 
         panel.grid = element_blank(),
-        legend.text = element_text(size = 20),
-        axis.text = element_text(size = 20),
+        legend.text = element_text(size = 10),
+        axis.text = element_text(size = 10),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Chance to make UCL (%)", title = "2022-2023 EPL chance to make UCL by week") +
@@ -124,8 +124,8 @@ relegation_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Relegated_p
   theme(legend.title = element_blank(),
         legend.position = "right", 
         panel.grid = element_blank(),
-        legend.text = element_text(size = 20),
-        axis.text = element_text(size = 20),
+        legend.text = element_text(size = 10),
+        axis.text = element_text(size = 10),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Chance of relegation (%)", title = "2022-2023 relegation chance by week") +
@@ -146,8 +146,8 @@ title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct))
   theme(legend.title = element_blank(),
         legend.position = "right", 
         panel.grid = element_blank(),
-        legend.text = element_text(size = 20),
-        axis.text = element_text(size = 20),
+        legend.text = element_text(size = 10),
+        axis.text = element_text(size = 10),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Chance of winning the EPL (%)", title = "2022-2023 EPL title chance by week") +
@@ -168,8 +168,8 @@ points_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pts)) +
   theme(legend.title = element_blank(),
         legend.position = "right", 
         panel.grid = element_blank(),
-        legend.text = element_text(size = 20),
-        axis.text = element_text(size = 20),
+        legend.text = element_text(size = 10),
+        axis.text = element_text(size = 10),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
@@ -190,8 +190,8 @@ GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
   theme(legend.title = element_blank(),
         legend.position = "right", 
         panel.grid = element_blank(),
-        legend.text = element_text(size = 20),
-        axis.text = element_text(size = 20),
+        legend.text = element_text(size = 10),
+        axis.text = element_text(size = 10),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
@@ -211,8 +211,8 @@ GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
   theme(legend.title = element_blank(),
         legend.position = "right", 
         panel.grid = element_blank(),
-        legend.text = element_text(size = 20),
-        axis.text = element_text(size = 20),
+        legend.text = element_text(size = 10),
+        axis.text = element_text(size = 10),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   scale_y_continuous(limits = c(0,NA), breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
@@ -232,8 +232,8 @@ GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
   theme(legend.title = element_blank(),
         legend.position = "right", 
         panel.grid = element_blank(),
-        legend.text = element_text(size = 20),
-        axis.text = element_text(size = 20),
+        legend.text = element_text(size = 10),
+        axis.text = element_text(size = 10),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
