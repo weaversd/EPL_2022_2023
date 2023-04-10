@@ -86,7 +86,8 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
 #save as png
 
 (position_plot)
-ggsave("weekly_analysis/position_by_week.png", device = "png")
+ggsave("weekly_analysis/position_by_week.png", device = "png",
+       width = 8.51, height = 5.69)
 
 
 #keep the order consistent alphebetically for the remaining plots
@@ -112,7 +113,8 @@ UCL_plot <- ggplot(data = weekly_table, aes(x = matchday, y = UCL_pct)) +
                       labels = current_team_order)
 
 (UCL_plot)
-ggsave("weekly_analysis/UCL_chance_by_week.png")
+ggsave("weekly_analysis/UCL_chance_by_week.png",
+       width = 8.51, height = 5.69)
 
 #make a percent relegation plot
 relegation_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Relegated_pct)) +
@@ -134,7 +136,8 @@ relegation_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Relegated_p
                       labels = current_team_order)
 
 (relegation_plot)
-ggsave("weekly_analysis/relegation_chance_by_week.png")
+ggsave("weekly_analysis/relegation_chance_by_week.png",
+       width = 8.51, height = 5.69)
 
 #make a percent title plot
 title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct)) +
@@ -157,7 +160,8 @@ title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct))
 
 
 (title_plot)
-ggsave("weekly_analysis/title_chance_by_week.png")
+ggsave("weekly_analysis/title_chance_by_week.png",
+       width = 8.51, height = 5.69)
 
 #make a points plot
 points_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pts)) +
@@ -179,7 +183,8 @@ points_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pts)) +
                       labels = current_team_order)
 
 (points_plot)
-ggsave("weekly_analysis/points_by_week.png")
+ggsave("weekly_analysis/points_by_week.png",
+       width = 8.51, height = 5.69)
 
 #make a GD plot
 GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
@@ -200,7 +205,8 @@ GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
   scale_fill_identity()
 
 (GD_plot)
-ggsave("weekly_analysis/goal_differential_by_week.png")
+ggsave("weekly_analysis/goal_differential_by_week.png",
+       width = 8.51, height = 5.69)
 
 #make a GF plot
 GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
@@ -221,7 +227,8 @@ GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
   scale_fill_identity()
 
 (GF_plot)
-ggsave("weekly_analysis/goals_scored_by_week.png")
+ggsave("weekly_analysis/goals_scored_by_week.png",
+       width = 8.51, height = 5.69)
 
 #make a GA plot
 GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
@@ -242,7 +249,8 @@ GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
   scale_fill_identity()
 
 (GA_plot)
-ggsave("weekly_analysis/goals_against_by_week.png")
+ggsave("weekly_analysis/goals_against_by_week.png",
+       width = 8.51, height = 5.69)
 
 #run the by team weekly analysis
 source("team_weekly_analysis.R")
