@@ -8,7 +8,7 @@ create_team_plot <- function(TEAM) {
         #divide by 100
         weekly_table_norm[[i]] <- weekly_table[[i]]/100
       } else if (i != 16){ #don't normalize matchday
-        weekly_table_norm[[i]] <- normalize(weekly_table[[i]], na.rm = T)
+        weekly_table_norm[[i]] <- normalize(weekly_table[[i]])
       }
     }
   }
